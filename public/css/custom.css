@@ -39,7 +39,7 @@
     100% {
         background-position: 0 50%;
     }
-}
+}*/
 #footer-bottom {
     background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
     background-size: 400% 400%;
@@ -56,7 +56,7 @@
 }
 footer:before {
     background-color: rgba(0, 0, 0, 0);
-}*/
+}
 
 /* 卡片动态渐变色 */
 div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
