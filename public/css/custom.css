@@ -271,3 +271,15 @@ box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
 #memos > ul > li > div > div.memos__text > pre > code {
   color: #000000;
 }
+
+#wrapper {
+background-image: url(https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fdccb8a16-2b2a-464d-94c4-2bc12e5e0701%2F9c498771-1b07-4524-beeb-8dc0d75e56b8%2FUntitled.png?table=block&id=0e5cfcc3-5d8f-4413-9121-2216851a7078&t=0e5cfcc3-5d8f-4413-9121-2216851a7078);
+background-position: center;
+background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+
+
+[id^="theme-"] {
+  font-family: LXGW WenKai;
+}
