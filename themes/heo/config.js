@@ -115,10 +115,6 @@ const CONFIG = {
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
   HEO_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/how-to-question',
   
-  // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
-  CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'hjh1715332905@163.com', // 邮箱地址 例如mail@tangly1024.com
-  CONTACT_GITHUB: process.env.NEXT_PUBLIC_CONTACT_GITHUB || 'https://github.com/Lazy-zed', // 你的github个人主页 例如 https://github.com/tangly1024
-  
   // *****  以下配置无效，只是预留开发 ****
   // 菜单配置
   HEO_MENU_INDEX: true, // 显示首页
