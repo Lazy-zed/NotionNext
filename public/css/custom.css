@@ -1,4 +1,4 @@
-/* 页脚footer渐变色滚动动画 */
+/* 页脚footer渐变色滚动动画 
 @-webkit-keyframes Gradient {
     0% {
         background-position: 0 50%;
@@ -56,7 +56,7 @@
 }
 footer:before {
     background-color: rgba(0, 0, 0, 0);
-}
+}*/
 
 /* 卡片动态渐变色 */
 div.border:not(div.animate__animated):not(div.lg\:p-6.p-4.border.rounded-xl.bg-\[\#57bd6a\]) {
