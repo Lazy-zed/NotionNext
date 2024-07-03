@@ -1,0 +1,480 @@
+/* 定义浅色主题的颜色变量 */
+body.light-theme,
+:root {
+    --color-main: #222; /* 主色调，用于文本颜色 */
+    --color-background: #fff; /* 背景色 */
+    --color-text-bg: #fbecde;/* 更改为文本背景色 */
+    --color-text-hover: #23d4d9;  /* 更改为文本悬停色 */
+    --color-memos-id: #008af4;  /* 更改为备忘录 ID 色 */
+    --color-img-border: #cfd9de; /* 图像边框颜色 */
+    --color-tag: #fe4365;  /* 更改为标签色 */
+    --color-link: #f1396d;  /* 更改为链接色 */
+    --color-tag-hover: #54a3ff;  /* 更改为标签悬停色 */
+    --color-fg-muted: #00a1d6;  /* 更改为前景色 */
+    --color-border-default: #f27474;  /* 更改为默认边框色 */
+    --color-border-muted: #e4d8d8; /* 淡化边框颜色，用于不太明显的边框 */
+    --color-post-preview: #fff; /* 文章预览背景色 */
+    --color-memos-pre-bg: #FAF9DE; /* 备忘录预览背景色 */
+}
+
+/* 定义深色主题的颜色变量 */
+.dark {
+    /* dark theme colors */
+    --color-main: #d3c8b4; /* 主题的主要颜色 */
+    --color-text-bg: #4e535a; /* 文本元素的背景颜色 */
+    --color-text-hover: #6e7277; /* 文本元素的悬停颜色 */
+    --color-memos-id: #008af4; /* 备忘录 ID 的颜色 */
+    --color-img-border: #292a2d; /* 图像的边框颜色 */
+    --color-tag: #539bf5; /* 标签的颜色 */
+    --color-link: #b8faff; /* 链接的颜色 */
+    --color-border-muted: #2d333b; /* 静音边框的颜色 */
+    --color-memos-pre-bg: #333333; /* 备忘录中 pre 元素的背景颜色 */
+}
+
+/* 为id为main的元素设置颜色 */
+#main {
+    color: var(--color-main); /* 使用主色调变量 */
+}
+
+/* 设置h2标签的样式 */
+h2 {
+    font-weight: 600; /* 字体粗细 */
+    line-height: 1.25; /* 行高 */
+    font-weight: 600; /* 字体粗细，重复设置以强调 */
+    padding-bottom: .3em; /* 底部内边距 */
+    font-size: 2em; /* 字体大小 */
+    border-bottom: 1px solid var(--color-border-muted); /* 底部边框 */
+}
+
+/* 设置类名为total的元素文本对齐方式 */
+.total {
+    text-align: left; /* 左对齐文本 */
+} 
+
+/* 设置类名为memos的元素样式 */
+.memos {
+    min-height: 300px; /* 最小高度 */
+    text-align: left; /* 左对齐文本 */
+    width: 100%; /* 宽度 */
+    line-height: 2; /* 行高 */
+    margin: 2rem 0; /* 上下边距 */
+}
+
+.memos a {
+    color: var(--color-link); /* 链接颜色 */
+    text-decoration: none; /* 去除下划线 */
+    overflow-wrap: break-word; /* 允许单词在必要的地方断行 */
+    word-break: break-all; /* 允许单词在任何地方断行 */
+}
+
+/* 设置类名为memos的元素中的a标签在悬停时的样式 */
+.memos a:hover {
+    text-decoration: underline; /* 悬停时添加下划线 */
+}
+
+.memos ul {
+    margin-left: 0 !important; /* 重要的左外边距 */
+    padding-left: 0 !important; /* 重要的左内边距 */
+}
+
+.memos__content {
+    flex-grow: 1; /* 弹性盒子模型中的放大比例 */
+    position: relative; /* 相对定位 */
+    max-width: 100%; /* 最大宽度 */
+    width: 100%; /* 宽度 */
+}
+
+.memos__text {
+    position: relative; /* 相对定位 */
+    background: var(--color-text-bg); /* 背景色 */
+    padding: 1rem; /* 内边距 */
+    border-radius: 0.8rem; /* 边框圆角 */
+    font-size: 1rem; /* 字体大小 */
+}
+
+.timeline {
+    display: flex; /* 弹性盒子模型 */
+    flex-direction: row; /* 子元素横向排列 */
+    flex-wrap: nowrap; /* 不换行 */
+    margin-bottom: 0.3rem; /* 底部外边距 */
+}
+
+.memos__text {
+    width: 100%; /* 宽度 */
+    overflow-wrap: break-word; /* 允许单词在必要的地方断行 */
+    font-size: 1rem; /* 字体大小 */
+    line-height: 1.75rem; /* 行高 */
+}
+
+.memos__text ul li {
+    list-style: none; /* 移除列表项的默认样式 */
+}
+
+.memos__text i {
+    margin: 0 0.25rem; /* 内边距 */
+}
+
+.memos__text:before {
+    content: ""; /* 伪元素的内容为空 */
+    position: absolute; /* 绝对定位 */
+    top: 23px; /* 顶部边距 */
+    left: -6px; /* 左外边距 */
+    width: 14px; /* 宽度 */
+    height: 14px; /* 高度 */
+    transform: rotate(45deg); /* 旋转45度 */
+    border-radius: 3px; /* 边框圆角 */
+    background: var(--color-text-bg); /* 背景色 */
+    z-index: 1; /* 层叠顺序 */
+}
+
+.memos__text pre {
+    margin-top: 0.25rem; /* 顶部外边距 */
+    margin-bottom: 0.25rem; /* 底部外边距 */
+    max-width: 100%; /* 最大宽度 */
+    white-space: pre-wrap; /* 保留空白符，允许换行 */
+    border-radius: 0.25rem; /* 边框圆角 */
+    background-color: var(--color-memos-pre-bg); /* 背景色 */
+    padding: 0.75rem; /* 内边距 */
+    overflow-wrap: break-word; /* 允许单词在必要的地方断行 */
+    word-break: break-all; /* 允许单词在任何地方断行 */
+    white-space: pre-wrap; /* 保留空白符，允许换行 */
+}
+
+.memos__text code {
+    /* 使元素呈块状水平展示，但不强制元素的宽度填满其容器 */
+    display: inline-block;
+    /* 添加圆角效果 */
+    border-radius: 0.25rem;
+    /* 设置背景颜色，使用CSS变量以便于全局管理 */
+    background-color: var(--color-memos-pre-bg);
+    /* 设置左右内边距 */
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    /* 设置字体为等宽字体，适用于代码展示 */
+    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    /* 设置字体大小 */
+    font-size: .875rem;
+    /* 设置行高，增加文本的可读性 */
+    line-height: 1.5rem;
+    /* 允许文本在需要时换行 */
+    overflow-wrap: break-word;
+}
+
+.memos__text pre code {
+    /* 使元素呈块状水平展示，并填满其容器 */
+    display: block;
+}
+
+.memos__meta {
+    /* 移除默认的外边距 */
+    margin: 0;
+}
+
+.memos__meta small {
+    /* 设置较小的字体大小 */
+    font-size: 0.85rem;
+    /* 设置字体加粗 */
+    font-weight: 500;
+    /* 设置文本颜色 */
+    color: #2376B7;
+}
+
+.memos__userinfo {
+    /* 使用弹性布局，子元素沿主轴排列 */
+    display: flex;
+    /* 设置字体加粗 */
+    font-weight: 800;
+    /* 确保子元素在交叉轴上居中对齐 */
+    align-items: center;
+}
+
+.memos__verify {
+    /* 设置左右外边距 */
+    margin-left: 2px;
+    /* 限制元素的最大宽度和高度 */
+    max-width: 20px;
+    max-height: 20px;
+    /* 设置文本颜色为蓝色 */
+    color: #1d9bf0;
+    /* 设置元素在行内垂直对齐方式 */
+    vertical-align: text-bottom;
+    /* 设置元素的位置为相对定位 */
+    position: relative;
+    /* 设置元素的高度 */
+    height: 1.25rem;
+    /* 设置填充颜色为当前文本颜色 */
+    fill: currentcolor;
+    /* 设置元素为内联块状 */
+    display: inline-block;
+    /* 设置元素不缩放 */
+    flex-shrink: 1;
+    /* 设置元素的左右外边距 */
+    margin-left: 4px;
+}
+
+.memos__id {
+    /* 设置字体大小 */
+    font-size: 1rem;
+    /* 允许文本在需要时换行 */
+    overflow-wrap: break-word;
+    /* 设置元素的最小宽度为0，使其可以根据内容自动伸缩 */
+    min-width: 0px;
+    /* 设置盒模型为边框盒模型 */
+    box-sizing: border-box;
+    /* 设置文本颜色，使用CSS变量以便于全局管理 */
+    color: var(--color-memos-id);
+    /* 设置元素为内联展示 */
+    display: inline;
+    /* 允许文本在需要时换行 */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* 设置元素不缩放 */
+    flex-shrink: 1;
+    /* 设置元素的左右外边距 */
+    margin-left: 4px;
+    /* 设置字体非加粗 */
+    font-weight: 500;
+}
+
+.resource-wrapper {
+    /* 使用弹性布局 */
+    display: flex;
+    /* 设置容器宽度为100% */
+    width: 100%;
+    /* 设置弹性项目沿主轴方向从起始点排列 */
+    flex-direction: column;
+    /* 设置弹性项目在交叉轴上从起始点排列 */
+    align-items: flex-start;
+    /* 设置弹性项目在主轴上从起始点排列 */
+    justify-content: flex-start;
+}
+
+/* 定义了一个包含图片的容器样式 */
+.images-wrapper {
+    margin-top: 0.5rem; /* 上边距为0.5rem */
+    display: grid; /* 显示为网格布局 */
+    width: 100%; /* 宽度为100% */
+    grid-template-columns: repeat(2,minmax(0,1fr)); /* 网格列设置为重复2次，每列最小宽度为0，最大为1fr */
+    gap: 0.5rem; /* 网格列和行之间的间隔为0.5rem */
+}
+
+/* 当屏幕尺寸大于等于640px时，调整图片容器的网格列布局 */
+@media (min-width: 640px) {
+    .images-wrapper {
+        grid-template-columns: repeat(3,minmax(0,1fr)); /* 网格列设置为重复3次，每列最小宽度为0，最大为1fr */
+    }
+}
+
+/* 定义了响应式图片的样式 */
+.resimg {
+    width: 100%; /* 宽度为100% */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    border-radius: 0.25rem; /* 边框圆角为0.25rem */
+    /* 定义了阴影效果的变量，具体颜色和大小会在其他地方定义 */
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow); /* 应用阴影效果 */
+    -ms-overflow-style: none; /* IE浏览器中隐藏滚动条 */
+    scrollbar-width: none; /* 隐藏滚动条 */
+    height: 100%; /* 高度为100% */
+}
+
+/* 定义了时间线中图片和响应式图片的样式 */
+.timeline img, .resimg img {
+    display: block; /* 显示为块级元素 */
+    max-width: 100%; /* 最大宽度为100% */
+    cursor: pointer; /* 鼠标悬停时变为指针形状 */
+    -o-object-fit: cover; /* 对象适应属性，覆盖容器 */
+    object-fit: cover; /* 对象适应属性，覆盖容器 */
+}
+
+/* 定义了标签样式 */
+.tag-span {
+    color: var(--color-tag); /* 文字颜色为定义的变量颜色 */
+}
+
+/* 鼠标悬停时改变标签颜色 */
+.tag-span:hover {
+    color: var(--color-tag-hover); /* 文字颜色为定义的悬停时颜色变量 */
+}
+
+/* 定义了加载按钮的样式 */
+.load-btn {
+    color: var(--color-main); /* 文字颜色为定义的主要颜色变量 */
+    background-color: var(--color-text-bg); /* 背景颜色为定义的文本背景颜色变量 */
+    border-radius: 12px; /* 边框圆角为8px */
+    padding: 10px; /* 内边距为10px */
+    border: none; /* 无边框 */
+}
+
+/* 鼠标悬停时改变按钮背景颜色 */
+.load-btn:hover {
+    background-color: var(--color-text-hover); /* 背景颜色为定义的文本悬停时颜色变量 */
+}
+
+/* 定义了文章预览的样式 */
+.post-preview {
+    max-width: 780px; /* 最大宽度为780px */
+    height: 210px; /* 高度为210px */
+    margin: 1em auto; /* 外边距为1em，自动水平居中 */
+    position: relative; /* 相对定位 */
+    display: flex; /* 显示为弹性盒子 */
+    background: var(--color-post-preview); /* 背景颜色为定义的文章预览颜色变量 */
+    border-radius: 5px; /* 边框圆角为4px */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .25); /* 阴影效果 */
+}
+
+/* 定义了文章预览的元数据样式 */
+.post-preview--meta {
+    width: 75%; /* 宽度为75% */
+    padding: 25px; /* 内边距为25px */
+    overflow: hidden; /* 内容溢出时隐藏 */
+}
+
+/* 定义了文章预览中间部分的行高 */
+.post-preview--middle {
+    line-height: 28px; /* 行高为28px */
+}
+
+/* 定义了文章预览标题的样式 */
+.post-preview--title {
+    font-size: 18px; /* 字体大小为18px */
+    margin: 0 !important; /* 外边距设置为0，并且不允许被覆盖 */
+}
+
+/* 定义了文章预览标题链接的样式 */
+.post-preview--title a {
+    text-decoration: none; /* 去掉下划线 */
+}
+
+/* 定义了文章预览日期的样式 */
+.post-preview--date {
+    font-size: 15px; /* 字体大小为15px */
+    color: #999; /* 文字颜色为灰色 */
+}
+
+/* 定义了文章预览摘要的样式 */
+.post-preview--excerpt {
+    font-size: 14px; /* 字体大小为14px */
+    line-height: 1.825; /* 行高为1.825 */
+}
+
+/* 定义了文章预览摘要段落的样式 */
+.post-preview--excerpt p {
+    display: inline; /* 显示为内联元素 */
+    margin: 0; /* 无外边距 */
+}
+
+/* 定义了文章预览section的最大高度和溢出隐藏 */
+.post-preview section {
+    max-height: 75px; /* 最大高度为75px */
+    overflow: hidden; /* 内容溢出时隐藏 */
+}
+
+/* 定义了文章预览图片的样式 */
+.post-preview img {
+    height: 210px !important; /* 高度为210px */
+}
+
+/* 定义了文章预览图片容器的样式 */
+.post-preview--image {
+    margin: 0 !important; /* 无外边距 */
+    float: right; /* 浮动到右侧 */
+    border-radius: 0 !important; /* 边框圆角为0 */
+    border-top-right-radius: 2px !important; /* 右上角圆角为2px */
+    border-bottom-right-radius: 2px !important; /* 右下角圆角为2px */
+    border-top-left-radius: 0 !important; /* 左上角圆角为0 */
+    border-bottom-left-radius: 0 !important; /* 左下角圆角为0 */
+}
+
+/* 定义了评分样式 */
+.rating {
+    display: block; /* 显示为块级元素 */
+    line-height: 15px; /* 行高为15px */
+}
+
+/* 定义了评分星星的样式 */
+.rating-star {
+    display: inline-block; /* 显示为内联块级元素 */
+    width: 75px; /* 宽度为75px */
+    height: 15px; /* 高度为15px */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAAClCAYAAAAUAAAYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA5xJREFUeNrs3T9rFEEcxvG7qEQIglaCICKkin9AUEtBKxU7wS61VlYivgWj70TtNFj5BqzE7qxEWwsxKIoYn4UtluFmbm8nczvzm+/BjxyuDwNzu3uXD0+46f7LC5PA45Hm+WTYw1x2LRDc0jzTXB+wqMlsaLPutz8fDFjYZHYauAz3NBvt83XNnyUWNpn1nVm3OsHmsb3EomazzZnVXKMPNcc0xzUnNKc0Rzv/77fms+Z7O3vt9b1eU7bZrNN68l5zcolX4ofmsuZXTdnmMvyi2dR86Bmcac62P6vKrnVubpc0bxYE32nOab45N8YqsvPeDfcD4SOav4HjprPuu+H5BTt9LXDMfNbdLPfT678Fx6vKupt1o/O8+R3pkOaJ5/iktqx7z/qp+aq5q/nY+fczmheaK03Gs7D5rLtZdzSvA6/Ebc2u55j57HQB0TzW7AzkjiKzny6+2hlKNE8juMNcFqKBaIZndRlCNBBNgmx7ZkE0fbLtZkE0EA1EM17WuQwhGogGooFoss6296y52cNO+J6HLJoPaFdbsvA9zGerIxrPh85eWYgGooFoDiQbuAxp0UA0EVmdWbRo+ma1WbRoIBqIZtzsnHdDWjQQDUQD0WSbde5ZS2UhmtqJJtSEiVkXooFoIJre2VATJmZdiKZ2ogk1YSb8oVMvDeUPnSAaiCaPJkzMuhANRAPRQDQpsqEmTMy6EI11oolpwkA0EA1EcyDZmCYMRAPR+LMxTZjqiCamCQPRQDQQzehNGIgGooFoIJpVZ2OaMBBN7USTqgkD0UA0EE3vbKomDERTO9GkasKYJJpUTRiIBqKBaEZvwkA0EA1EA9GkyKZqwkA01olmrCYMRAPRQDR9LkO+0QmiKbAJUyTRjNWEgWggGohm9CYMRAPRQDQQzZDsWE0YiMYC0eTYhIFoIJrKiCbHJgxEY4FocmzCZEs0OTZhIBqIpjKiybEJA9FANBANROPL5tiEgWhKIJoSmzAQDURjjGhKbMJANCUQTYlNmNGIpsQmDEQD0RgjmhKbMBANRAPR1Es0JTZhIJpciMZaEwaigWgKJBprTRiIJheisdaESUo01powEA1EUyDRWGvCQDQQDURjm2isNWEgmlURzWw2q4pZIBqIJkOiCVyGJpkFolkV0ejMMvel28mIRptl7ku3IRqIpjCimfNuaJpZIBqIBqIpm2ice5Z5ZonJupvVkMRu4JW4qXnrOWY++1+AAQBw9BJSCTeN9wAAAABJRU5ErkJggg==); /* 背景图片使用base64编码的图片数据 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+
+.allstar10 {
+    background-position: 0px 0px;
+}
+
+.allstar9 {
+    background-position: 0px -15px;
+}
+
+.allstar8 {
+    background-position: 0px -30px;
+}
+
+.allstar7 {
+    background-position: 0px -45px;
+}
+
+.allstar6 {
+    background-position: 0px -60px;
+}
+
+.allstar5 {
+    background-position: 0px -75px;
+}
+
+.allstar4 {
+    background-position: 0px -90px;
+}
+
+.allstar3 {
+    background-position: 0px -105px;
+}
+
+.allstar2 {
+    background-position: 0px -120px;
+}
+
+.allstar1 {
+    background-position: 0px -135px;
+}
+
+.allstar0 {
+    background-position: 0px -150px;
+}
+
+.rating-average {
+    color: #777;
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+/* 定义了Spotify嵌入内容的样式 */
+.spotify-wrapper>iframe {
+    position: relative; /* 相对定位 */
+    height: 152px; /* 高度为152px */
+}
+
+/* 定义了视频容器的样式 */
+.video-wrapper {
+    height: 0; /* 高度为0 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+    padding-bottom: 56.25%; /* 底部内边距为容器宽度的56.25%，用于保持视频的宽高比 */
+    position: relative; /* 相对定位 */
+    width: 100%; /* 宽度为100% */
+}
+
+/* 定义了视频容器内部iframe的样式 */
+.video-wrapper iframe {
+    border: 0; /* 无边框 */
+    height: 100%; /* 高度为100% */
+    left: 0; /* 左侧位置为0 */
+    position: absolute; /* 绝对定位 */
+    top: 0; /* 顶部位置为0 */
+    width: 100%; /* 宽度为100% */
+}
