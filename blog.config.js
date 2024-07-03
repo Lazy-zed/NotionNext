@@ -45,7 +45,7 @@ const BLOG = {
 
   NOTION_HOST: process.env.NEXT_PUBLIC_NOTION_HOST || 'https://www.notion.so', // Notion域名，您可以选择用自己的域名进行反向代理，如果不懂得什么是反向代理，请勿修改此项
 
-  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || 'https://media.9game.cn/gamebase/2021/10/27/229165637.jpg', // blog favicon 配置, 默认使用 /favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
+  BLOG_FAVICON: process.env.NEXT_PUBLIC_FAVICON || 'https://ts1.cn.mm.bing.net/th/id/R-C.316cf64f8488708dee4f00ae4f57b685?rik=YQbttCXC%2bwrjPw&riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f24%2f7724.jpg&ehk=gqX4Aqnoc7kC7%2fut890qyVjlpGjqLyzsXLjiO9Cp8D4%3d&risl=&pid=ImgRaw&r=0', // blog favicon 配置, 默认使用 /favicon.ico，支持在线图片，如 https://img.imesong.com/favicon.png
 
   IMAGE_COMPRESS_WIDTH: process.env.NEXT_PUBLIC_IMAGE_COMPRESS_WIDTH || 800, // 图片压缩宽度默认值，作用于博客封面和文章内容 越小加载图片越快
   IMAGE_ZOOM_IN_WIDTH: process.env.NEXT_PUBLIC_IMAGE_ZOOM_IN_WIDTH || 1200, // 文章图片点击放大后的画质宽度，不代表在网页中的实际展示宽度
@@ -243,10 +243,10 @@ const BLOG = {
   FIREWORKS: process.env.NEXT_PUBLIC_FIREWORKS || true, // 开关
   // 烟花色彩
   FIREWORKS_COLOR: [
-    '255,182,185',
-    '250,227,217',
-    '187,222,214',
-    '138,198,209'
+    '54,80,243',
+    '8,255,180',
+    '8,137,255',
+    '8,238,255'
   ],
 
   // 鼠标跟随特效
