@@ -1,3 +1,11 @@
+/*静态文件导入 自定义样式*/
+#theme-fukasawa .sideLeft hr{
+    opacity: .04;
+}
+.fa-info:before{
+    content: "\f05a";
+}
+
 /* 蕁笈��footer羝����我������� */
 @-webkit-keyframes Gradient {
     0% {
