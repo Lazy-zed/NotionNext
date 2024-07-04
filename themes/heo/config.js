@@ -13,15 +13,15 @@ const CONFIG = {
   HEO_HERO_REVERSE: false,
   // 博客主体区左右侧组件颠倒位置
   HEO_HERO_BODY_REVERSE: false,
-
+  
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '分享编程',
   HEO_HERO_TITLE_2: '与游戏开发',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
-  HEO_HERO_TITLE_5: '总有光照亮前路~',
+  HEO_HERO_TITLE_5: '总有光照亮前路',
   HEO_HERO_TITLE_LINK: 'https://lazy-zed.com',
-
+  
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '游戏理论', url: '/tag/游戏理论' },
   HEO_HERO_CATEGORY_2: { title: '游戏实践', url: '/tag/游戏实践' },
