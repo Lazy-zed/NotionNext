@@ -23,9 +23,9 @@ const CONFIG = {
   HEO_HERO_TITLE_LINK: 'https://lazy-zed.com',
 
   // 英雄区显示三个置顶分类
-  HEO_HERO_CATEGORY_1: { title: '游戏理论', url: '/tag/游戏理论' },
-  HEO_HERO_CATEGORY_2: { title: '游戏实践', url: '/tag/游戏实践' },
-  HEO_HERO_CATEGORY_3: { title: '心情随笔', url: '/tag/心情随笔' },
+  HEO_HERO_CATEGORY_1: { title: '精选文章', url: '/tag/精选文章' },
+  HEO_HERO_CATEGORY_2: { title: '实际问题', url: '/tag/实际问题' },
+  HEO_HERO_CATEGORY_3: { title: '理论常识', url: '/tag/理论常识' },
 
   // 英雄区右侧推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   HEO_HERO_RECOMMEND_POST_TAG: '',
