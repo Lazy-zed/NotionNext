@@ -19,7 +19,7 @@ const CONFIG = {
   HEO_HERO_TITLE_2: '与游戏开发',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
-  HEO_HERO_TITLE_5: '热爱 是最顶级的天赋',
+  HEO_HERO_TITLE_5: '热爱 是最好的天赋',
   HEO_HERO_TITLE_LINK: 'https://lazy-zed.com',
 
   // 英雄区显示三个置顶分类
