@@ -6,7 +6,7 @@ const CONFIG = {
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
     { title: '欢迎来到lzzd的博客', url: 'https://lazy-zed.com' },
-    { title: '努力学好渲染的第n天', url: 'https://lazy-zed.com' },
+    { title: '学游戏开发的第n天', url: 'https://lazy-zed.com' },
   ],
 
   // 英雄区左右侧组件颠倒位置
