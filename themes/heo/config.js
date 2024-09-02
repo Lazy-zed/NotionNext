@@ -15,7 +15,7 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: '分享编程',
+  HEO_HERO_TITLE_1: '分享Unity',
   HEO_HERO_TITLE_2: '与游戏开发',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
