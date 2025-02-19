@@ -259,7 +259,7 @@ const BLOG = {
     // 樱花飘落特效
     SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
     // 漂浮线段特效
-    NEST: process.env.NEXT_PUBLIC_NEST || truee, // 开关
+    NEST: process.env.NEXT_PUBLIC_NEST || true, // 开关
     // 动态彩带特效
     FLUTTERINGRIBBON: process.env.NEXT_PUBLIC_FLUTTERINGRIBBON || true, // 开关
     // 静态彩带特效
