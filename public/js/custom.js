@@ -1,4 +1,4 @@
-/var OriginTitile = document.title;
+var OriginTitile = document.title;
 var jiao;
 
 document.addEventListener('visibilitychange', function () {
@@ -11,4 +11,4 @@ document.addEventListener('visibilitychange', function () {
 				document.title = '你怎么跑啦w(ﾟДﾟ)w';
 				clearTimeout(jiao);
 		}
-});/ 这里编写自定义js脚本；将被静态引入到页面中
+});
