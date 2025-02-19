@@ -259,9 +259,9 @@ const BLOG = {
     // 樱花飘落特效
     SAKURA: process.env.NEXT_PUBLIC_SAKURA || true, // 开关
     // 漂浮线段特效
-    NEST: process.env.NEXT_PUBLIC_NEST || false, // 开关
+    NEST: process.env.NEXT_PUBLIC_NEST || truee, // 开关
     // 动态彩带特效
-    FLUTTERINGRIBBON: process.env.NEXT_PUBLIC_FLUTTERINGRIBBON || false, // 开关
+    FLUTTERINGRIBBON: process.env.NEXT_PUBLIC_FLUTTERINGRIBBON || true, // 开关
     // 静态彩带特效
     RIBBON: process.env.NEXT_PUBLIC_RIBBON || false, // 开关
     // 星空雨特效 黑夜模式才会生效
@@ -326,7 +326,7 @@ const BLOG = {
     MUSIC_PLAYER_METING_SERVER:
     process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_SERVER || 'netease', // 音乐平台，[netease, tencent, kugou, xiami, baidu]
     MUSIC_PLAYER_METING_ID:
-    process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_ID || '60198', // 对应歌单的 id
+    process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_ID || '13344389801', // 对应歌单的 id
     MUSIC_PLAYER_METING_LRC_TYPE:
     process.env.NEXT_PUBLIC_MUSIC_PLAYER_METING_LRC_TYPE || '1', // 可选值： 3 | 1 | 0（0：禁用 lrc 歌词，1：lrc 格式的字符串，3：lrc 文件 url）
     
