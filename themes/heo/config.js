@@ -16,7 +16,7 @@ const CONFIG = {
 
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '分享游戏开发',
-  HEO_HERO_TITLE_2: 'U3D AI与渲染',
+  HEO_HERO_TITLE_2: '渲染与AI',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
   HEO_HERO_TITLE_5: '热爱 是最好的天赋',
@@ -38,7 +38,7 @@ const CONFIG = {
     '🔍 喜欢渲染与AI',
     '🤝 专心学习游戏开发',
     '🏃 脚踏实地行动派',
-    '🧱 搬砖ing',
+    '🧱 Unity3D',
   ],
 
   // 个人资料底部按钮
