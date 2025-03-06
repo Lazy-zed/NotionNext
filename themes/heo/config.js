@@ -15,7 +15,7 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: 'Unity3D/UE',
+  HEO_HERO_TITLE_1: 'Unity3D|UE',
   HEO_HERO_TITLE_2: '渲染与AI',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
