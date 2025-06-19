@@ -15,7 +15,7 @@ const CONFIG = {
   HEO_HERO_BODY_REVERSE: false,
 
   // 英雄区(首页顶部大卡)
-  HEO_HERO_TITLE_1: 'Unity3D与AI',
+  HEO_HERO_TITLE_1: 'Unity3D&AI',
   HEO_HERO_TITLE_2: 'ShaderLab',
   HEO_HERO_TITLE_3: 'lazy-zed.com',
   HEO_HERO_TITLE_4: '最新发布',
@@ -38,7 +38,7 @@ const CONFIG = {
     '🔍 喜欢渲染与AI',
     '🤝 专心学习游戏开发',
     '🏃 脚踏实地行动派',
-    '🧱 学习shader',
+    '🧱 996ing',
   ],
 
   // 个人资料底部按钮
