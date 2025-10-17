@@ -38,7 +38,7 @@ const CONFIG = {
     '🔍 喜欢渲染与AI',
     '🤝 专心学习游戏开发',
     '🏃 脚踏实地行动派',
-    '🧱 ShaderStudying',
+    '🧱 Shader',
   ],
 
   // 个人资料底部按钮
