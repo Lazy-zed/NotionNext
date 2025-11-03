@@ -36,7 +36,7 @@ const CONFIG = {
   HEO_INFOCARD_GREETINGS: [
     '游戏开发客户端',
     '🔍 喜欢渲染与AI',
-    '🤝 抽象的魅力',
+    '🤝 Passion',
     '🏃 脚踏实地行动派',
     '🧱 ShaderStudy',
   ],
