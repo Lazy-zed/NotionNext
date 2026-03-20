@@ -21,6 +21,7 @@ export default function Live2DChat() {
     setInput('')
     setLoading(true)
 
+    let reply = '网络出错了，请稍后再试。'
     try {
       const res = await fetch('https://little-truth-a761.huhujiahao09.workers.dev/', {
         method: 'POST',
@@ -34,10 +35,11 @@ export default function Live2DChat() {
       })
       const data = await res.json()
       reply = data?.response || '抱歉，我没有理解你的问题。'
-      break
     } catch (e) {
-      break
+      reply = '网络出错了，请稍后再试。'
     }
+
+    setMessages([...newMessages, { role: 'assistant', content: reply }])
     setLoading(false)
   }
 
