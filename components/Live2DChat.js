@@ -22,28 +22,21 @@ export default function Live2DChat() {
     setLoading(true)
 
     try {
-      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY
-      const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            contents: newMessages.map(m => ({
-              role: m.role === 'assistant' ? 'model' : 'user',
-              parts: [{ text: m.content }]
-            })),
-            systemInstruction: {
-              parts: [{ text: '你是一个清爽可爱的学生风男生助手，说话简洁友好，偶尔用一些轻松的语气，但不过分卖萌。' }]
-            }
-          })
-        }
-      )
+      const res = await fetch('https://little-truth-a761.huhujiahao09.workers.dev/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: newMessages.map(m => ({
+            role: m.role === 'assistant' ? 'assistant' : 'user',
+            content: m.content
+          }))
+        })
+      })
       const data = await res.json()
-      const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || '抱歉，我没有理解你的问题。'
-      setMessages([...newMessages, { role: 'assistant', content: reply }])
+      reply = data?.response || '抱歉，我没有理解你的问题。'
+      break
     } catch (e) {
-      setMessages([...newMessages, { role: 'assistant', content: '网络出错了，请稍后再试。' }])
+      break
     }
     setLoading(false)
   }
