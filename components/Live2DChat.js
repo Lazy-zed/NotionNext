@@ -100,15 +100,15 @@ export default function Live2DChat() {
       <div className='flex flex-col items-center gap-2'>
         {!open && (
           <div
-            className='px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full shadow-md border border-blue-200 cursor-pointer'
+            className='px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-md border border-blue-200 cursor-pointer'
             onClick={() => setOpen(true)}
             style={{ fontFamily: '"Ma Shan Zheng", "ZCOOL XiaoWei", cursive' }}>
-            <span className='text-blue-400 text-sm font-medium whitespace-nowrap'>点击和我聊天吧~</span>
+            <span className='text-blue-400 text-2xl font-medium whitespace-nowrap'>点击和我聊天吧~</span>
           </div>
         )}
         <button
           onClick={() => setOpen(!open)}
-          className='w-24 h-24 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
+          className='w-48 h-48 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
           title='和我聊天吧'>
           <img
             src='https://www.keaitupian.cn/cjpic/frombd/1/253/3689025110/3372143749.jpg'
