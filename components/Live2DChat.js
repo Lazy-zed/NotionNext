@@ -49,7 +49,7 @@ export default function Live2DChat() {
   }
 
   return (
-    <div className='fixed bottom-6 right-6 z-50 flex flex-col items-end'>
+    <div className='fixed right-6 top-1/3 z-50 flex flex-col items-end'>
       {/* 对话框 */}
       {open && (
         <div className='mb-3 w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700'>
@@ -102,12 +102,12 @@ export default function Live2DChat() {
       {/* 悬浮角色按钮 */}
       <button
         onClick={() => setOpen(!open)}
-        className='w-16 h-16 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
+        className='w-32 h-32 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
         title='和我聊天吧'>
         <img
-          src='https://api.dicebear.com/7.x/adventurer/svg?seed=Felix&backgroundColor=b6e3f4&hair=short01&eyes=variant01&mouth=variant01'
+          src='https://www.keaitupian.cn/cjpic/frombd/1/253/3689025110/3372143749.jpg'
           alt='助手'
-          className='w-full h-full object-cover bg-blue-100'
+          className='w-full h-full object-cover'
         />
       </button>
     </div>
