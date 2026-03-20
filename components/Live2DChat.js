@@ -52,17 +52,15 @@ export default function Live2DChat() {
     <div className='fixed right-6 top-1/3 z-50 flex flex-col items-end'>
       {/* 对话框 */}
       {open && (
-        <div className='mb-3 w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700'>
-          {/* 标题栏 */}
-          <div className='bg-blue-400 px-4 py-3 flex items-center justify-between'>
-            <span className='text-white font-bold text-sm'>✨ 小助手</span>
-            <button onClick={() => setOpen(false)} className='text-white text-lg leading-none'>×</button>
+        <div className='mb-4 w-[28rem] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 dark:border-gray-700'>
+          <div className='bg-blue-400 px-5 py-4 flex items-center justify-between'>
+            <span className='text-white font-bold text-base'>✨ 小助手</span>
+            <button onClick={() => setOpen(false)} className='text-white text-xl leading-none'>×</button>
           </div>
-          {/* 消息列表 */}
-          <div className='flex-1 overflow-y-auto p-3 space-y-2 max-h-72'>
+          <div className='flex-1 overflow-y-auto p-4 space-y-3 max-h-[27rem]'>
             {messages.map((m, i) => (
               <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                <div className={`max-w-[85%] px-3 py-2 rounded-2xl text-sm ${
+                <div className={`max-w-[85%] px-4 py-3 rounded-2xl text-sm leading-relaxed ${
                   m.role === 'user'
                     ? 'bg-blue-400 text-white rounded-br-sm'
                     : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-bl-sm'
@@ -73,17 +71,16 @@ export default function Live2DChat() {
             ))}
             {loading && (
               <div className='flex justify-start'>
-                <div className='bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-2xl rounded-bl-sm text-sm text-gray-500'>
+                <div className='bg-gray-100 dark:bg-gray-700 px-4 py-3 rounded-2xl rounded-bl-sm text-sm text-gray-500'>
                   思考中...
                 </div>
               </div>
             )}
             <div ref={messagesEndRef} />
           </div>
-          {/* 输入框 */}
-          <div className='p-2 border-t border-gray-200 dark:border-gray-700 flex gap-2'>
+          <div className='p-3 border-t border-gray-200 dark:border-gray-700 flex gap-2'>
             <input
-              className='flex-1 text-sm px-3 py-2 rounded-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white outline-none focus:border-blue-400'
+              className='flex-1 text-sm px-4 py-2.5 rounded-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white outline-none focus:border-blue-400'
               placeholder='输入消息...'
               value={input}
               onChange={e => setInput(e.target.value)}
@@ -92,24 +89,34 @@ export default function Live2DChat() {
             <button
               onClick={sendMessage}
               disabled={loading}
-              className='bg-blue-400 hover:bg-blue-500 text-white text-sm px-3 py-2 rounded-full disabled:opacity-50'>
+              className='bg-blue-400 hover:bg-blue-500 text-white text-sm px-4 py-2.5 rounded-full disabled:opacity-50'>
               发送
             </button>
           </div>
         </div>
       )}
 
-      {/* 悬浮角色按钮 */}
-      <button
-        onClick={() => setOpen(!open)}
-        className='w-32 h-32 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
-        title='和我聊天吧'>
-        <img
-          src='https://www.keaitupian.cn/cjpic/frombd/1/253/3689025110/3372143749.jpg'
-          alt='助手'
-          className='w-full h-full object-cover'
-        />
-      </button>
+      {/* 提示文字 + 头像 */}
+      <div className='flex flex-col items-center gap-2'>
+        {!open && (
+          <div
+            className='px-3 py-1.5 bg-white dark:bg-gray-800 rounded-full shadow-md border border-blue-200 cursor-pointer'
+            onClick={() => setOpen(true)}
+            style={{ fontFamily: '"Ma Shan Zheng", "ZCOOL XiaoWei", cursive' }}>
+            <span className='text-blue-400 text-sm font-medium whitespace-nowrap'>点击和我聊天吧~</span>
+          </div>
+        )}
+        <button
+          onClick={() => setOpen(!open)}
+          className='w-24 h-24 rounded-full overflow-hidden shadow-lg border-2 border-blue-300 hover:scale-110 transition-transform'
+          title='和我聊天吧'>
+          <img
+            src='https://www.keaitupian.cn/cjpic/frombd/1/253/3689025110/3372143749.jpg'
+            alt='助手'
+            className='w-full h-full object-cover'
+          />
+        </button>
+      </div>
     </div>
   )
 }
