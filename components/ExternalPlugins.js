@@ -98,7 +98,7 @@ const ExternalPlugin = props => {
     'DIFY_CHATBOT_ENABLED',
     null,
     NOTION_CONFIG
-  )
+  ) || process.env.NEXT_PUBLIC_DIFY_CHATBOT_ENABLED
   const TIANLI_KEY = siteConfig('TianliGPT_KEY', null, NOTION_CONFIG)
   const GLOBAL_JS = siteConfig('GLOBAL_JS', '', NOTION_CONFIG)
   const CLARITY_ID = siteConfig('CLARITY_ID', null, NOTION_CONFIG)
