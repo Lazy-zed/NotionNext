@@ -100,6 +100,10 @@ const NotionPage = ({ post, className }) => {
     }
   }, [post])
 
+  if (!post?.blockMap) {
+    return null
+  }
+
   return (
     <div
       id='notion-article'
