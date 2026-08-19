@@ -18,8 +18,8 @@ export async function getStaticProps({ params: { tag }, locale }) {
   const props = await getGlobalData({ from, locale })
 
   // 过滤状态
-  props.posts = props.allPages
-    ?.filter(page => page.type === 'Post' && page.status === 'Published')
+  props.posts = (props.allPages || [])
+    .filter(page => page.type === 'Post' && page.status === 'Published')
     .filter(post => post && post?.tags && post?.tags.includes(tag))
 
   // 处理文章页数
@@ -55,11 +55,10 @@ export async function getStaticProps({ params: { tag }, locale }) {
  * @param tags
  */
 function getTagNames(tags) {
-  const tagNames = []
-  tags.forEach(tag => {
-    tagNames.push(tag.name)
-  })
-  return tagNames
+  if (!Array.isArray(tags)) {
+    return []
+  }
+  return tags.map(tag => tag?.name).filter(Boolean)
 }
 
 export async function getStaticPaths() {
@@ -68,8 +67,8 @@ export async function getStaticPaths() {
   const tagNames = getTagNames(tagOptions)
 
   return {
-    paths: Object.keys(tagNames).map(index => ({
-      params: { tag: tagNames[index] }
+    paths: tagNames.map(tag => ({
+      params: { tag }
     })),
     fallback: true
   }
