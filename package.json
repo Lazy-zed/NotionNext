@@ -12,6 +12,9 @@
     "email": "mail@tangly1024.com",
     "url": "http://tangly1024.com"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
